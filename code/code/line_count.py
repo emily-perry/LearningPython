@@ -22,9 +22,9 @@ def main():
 
 def count_file(filename):
     """count the number of lines in a file"""
-    f = open(filename, 'r')
-    nlines = len(f.readlines())
-    f.close()
+    with open filename as f:  // With This code we dont have to Close the file
+        nlines = len(f.readlines())
+            
     return(nlines)
 
 
